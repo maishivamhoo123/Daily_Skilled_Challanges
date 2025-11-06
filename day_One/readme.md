@@ -1,78 +1,76 @@
-🏁 Day 1 – End
+# 🚀 Backend Development Daily Practice Log  
 
-✅ Task completed:
-Built a basic Express.js backend with three endpoints:
+Welcome to my **daily backend learning journey**, where I build and improve backend skills step by step — writing real code, solving real errors, and developing a production mindset.  
+Each day focuses on small but meaningful backend challenges using **Node.js**, **Express**, and later **Solidity/Web3** integration.
 
-GET /getting – returns all items
+---
 
-POST /add – adds a new item to an in-memory array
+## 🏁 Day 1 – Building My First Express Server  
 
-DELETE /delete/:id – deletes an item by ID
+### ✅ Task Completed
+Built a simple Express.js backend with the following endpoints:
+- `GET /getting` → Fetch all items from memory  
+- `POST /add` → Add a new item to the in-memory list  
+- `DELETE /delete/:id` → Delete an item by ID  
 
-🧠 What I learned:
+🧩 In-memory data structure:
+```js
+let items = [];
+🧠 What I Learned
+How to set up an Express.js server from scratch.
 
-How to use express.json() middleware to handle JSON bodies.
+Using express.json() to parse incoming JSON data.
 
-Difference between req.params and req.body.
+Understanding the difference between req.params and req.body.
 
-Proper way to use splice() vs slice() for array mutation.
+Correct use of .splice() for deleting array elements.
 
-Importance of sending responses only once and returning afterward.
+Importance of returning only one response per request.
 
-REST route naming conventions and good JSON structure for responses.
+How to write cleaner REST routes and handle edge cases.
 
-⚙ What went wrong / I struggled with:
+⚙️ What Went Wrong / Challenges Faced
+Used async/await unnecessarily on non-async routes.
 
-Initially misused async/await where it wasn’t needed.
+Confused req.params and req.body when handling requests.
 
-Confused req.params vs req.body while adding and deleting.
+Incorrect destructuring syntax:
 
-Tried destructuring from a number (const { id } = parseInt(...)), which broke the delete route.
+js
+Copy code
+const { id } = parseInt(req.body.id); // ❌ invalid
+Used .slice() instead of .splice() which didn’t modify the array.
 
-Used .slice() instead of .splice() — causing delete logic to fail.
+Forgot to return after sending error responses.
 
-Missed return statements after error responses.
+Naming inconsistency (Id vs id).
 
-🔁 Plan for next day:
+🔁 Plan for Next Day (Day 2)
+Add complete CRUD: GET, POST, PUT, DELETE routes with structured JSON responses.
 
-Add full CRUD functionality (GET, POST, PUT, DELETE) with in-memory storage.
+Use proper HTTP status codes (200, 201, 400, 404, etc.).
 
-Return consistent JSON responses with status, message, and data.
+Create a modular folder structure (routes, controllers, middleware).
 
-Learn proper HTTP status code usage (200, 201, 400, 404, 500).
+Improve error handling and validation.
 
-Write clean modular code (split routes into a separate file).
+Prepare base for connecting to a database (MongoDB or PostgreSQL).
 
-📄 README.md for GitHub
+🧩 Tech Stack
+Node.js
 
-You can copy-paste the below into your repo:
+Express.js
 
-# 🚀 Backend Practice – Daily Progress Log
+📅 Daily Streak Goal
+Building backend skills from scratch to advanced — one day, one project, one improvement at a time.
 
-## 🏁 Day 1 – End
+This journey is aimed at becoming confident in:
 
-✅ **Task completed:**  
-Built a basic Express.js backend with three endpoints:  
-- `GET /getting` – returns all items  
-- `POST /add` – adds a new item to an in-memory array  
-- `DELETE /delete/:id` – deletes an item by ID  
+REST API design
 
-🧠 **What I learned:**  
-- Using `express.json()` middleware  
-- Difference between `req.params` and `req.body`  
-- Proper array mutation with `splice()`  
-- Sending one response per request  
-- REST route naming conventions  
+Scalable backend architecture
 
-⚙ **What went wrong / I struggled with:**  
-- Misused `async/await`  
-- Mixed up `req.body` and `req.params`  
-- Wrong destructuring in delete logic  
-- Used `.slice()` instead of `.splice()`  
-- Missing `return` after sending error responses  
+Error handling and clean code
 
-🔁 **Plan for next day:**  
-- Implement full CRUD (`GET`, `POST`, `PUT`, `DELETE`)  
-- Use proper HTTP status codes  
-- Return structured JSON responses  
-- Split routes into separate files for cleaner structure  
+Web3 + Solidity integration in later stages
+
